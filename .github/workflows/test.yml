@@ -19,11 +19,8 @@ jobs:
         with:
           ndk-version: r18b
           add-to-path: false
-      - run: ./build.sh
-        env:
-          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
-
       - name: Build With Gradle
+        env:ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
         run: |
           chmod +x gradlew
           ./gradlew assemblerelease --build-cache --parallel --daemon --warning-mode all --stacktrace
