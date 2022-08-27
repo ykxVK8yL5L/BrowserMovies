@@ -1,11 +1,13 @@
-name: Test Build
+name: Relese
 
 on:
-#  push:
-#    branches:
-#      - main
-#  pull_request:
+  repository_dispatch:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to release'
+        required: true
+        default: 'v0.0.1'
 
 jobs:
   build:
@@ -35,5 +37,13 @@ jobs:
       - name: Upload App To Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: com.github.tvbox.osc
+          name: com.github.browsermovies
           path: ${{ github.workspace }}/apk/*
+      - name: Upload binary to GitHub Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.RELEASE_TOKEN }}
+          file: ${{ github.workspace }}/apk/*
+          file_glob: true
+          overwrite: true
+          tag: "refs/tags/${{ github.event.inputs.tag }}"
