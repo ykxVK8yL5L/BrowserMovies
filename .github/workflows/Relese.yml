@@ -34,16 +34,27 @@ jobs:
           for file in `find ~ -name "*.apk" -print`; do
             mv "$file" ${{ github.workspace }}/apk/
           done
+      - uses: r0adkll/sign-android-release@v1
+        name: Sign app APK
+        # ID used to access action output
+        id: sign_app
+        with:
+          releaseDirectory: ${{ github.workspace }}/apk
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
       - name: Upload App To Artifact
         uses: actions/upload-artifact@v3
         with:
           name: com.github.browsermovies
-          path: ${{ github.workspace }}/apk/*
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
       - name: Upload binary to GitHub Release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.RELEASE_TOKEN }}
-          file: ${{ github.workspace }}/apk/*
+       #   file: ${{ github.workspace }}/apk/*
+          file: ${{steps.sign_app.outputs.signedReleaseFile}}
           file_glob: true
           overwrite: true
           tag: "refs/tags/${{ github.event.inputs.tag }}"
