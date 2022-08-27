@@ -1,0 +1,2 @@
+rootProject.name='BrowserMovies'
+include ':app', ':crosswalk-23.53.589.4'

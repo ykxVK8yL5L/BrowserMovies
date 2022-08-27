@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:summary="@string/btn_setting"
+                  android:title="@string/btn_setting">
+
+    <ListPreference
+        android:defaultValue="c0"
+        android:icon="@drawable/ic_settings_more"
+        android:entries="@array/pref_main_list_type_entries"
+        android:entryValues="@array/pref_main_list_type_values"
+        android:key="prefs_main_list_type_key"
+        android:dialogMessage="@string/main_mode"
+        android:title="@string/main_mode">
+    </ListPreference>
+
+    <ListPreference
+        android:defaultValue="c4"
+        android:icon="@drawable/ic_settings_more"
+        android:entries="@array/pref_listnum_entries"
+        android:entryValues="@array/pref_listnum_values"
+        android:key="prefs_listnum_key"
+        android:dialogMessage="@string/list_count"
+        android:title="@string/list_count">
+    </ListPreference>
+    <ListPreference
+        android:defaultValue="c8"
+        android:icon="@drawable/ic_settings_more"
+        android:entries="@array/pref_sourcesnum_entries"
+        android:entryValues="@array/pref_sourcesnum_values"
+        android:key="prefs_sourcesnum_key"
+        android:dialogMessage="@string/source_count"
+        android:title="@string/source_count">
+    </ListPreference>
+    <ListPreference
+        android:defaultValue="c8"
+        android:icon="@drawable/ic_settings_more"
+        android:entries="@array/pref_imgsize_entries"
+        android:entryValues="@array/pref_imgsize_values"
+        android:key="prefs_imgsize_key"
+        android:dialogMessage="@string/image_size"
+        android:title="@string/image_size">
+    </ListPreference>
+
+
+
+
+
+
+
+</PreferenceScreen>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:padding="20dp">
+
+    <TextView android:id="@+id/addr_tv" android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:gravity="center"
+              android:minHeight="20dp"
+              android:textColor="@android:color/white" android:textSize="14sp"/>
+
+    <!--qr code-->
+    <ImageView android:id="@+id/qrcode_imageview" android:layout_width="150dp"
+               android:layout_height="150dp"
+               android:layout_below="@id/addr_tv"
+               android:layout_centerHorizontal="true"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="10dp"
+               />
+</RelativeLayout>

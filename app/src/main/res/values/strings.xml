@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">BrowserMovies</string>
+    <string name="btn_setting">Setting</string>
+    <string name="btn_reload">Reload</string>
+    <string name="btn_del">Delete</string>
+    <string name="btn_servicer">Servicer</string>
+    <string name="btn_history">History</string>
+    <string name="btn_input">Input</string>
+
+    <string name="image">Image</string>
+    <string name="text">Text</string>
+
+    <string name="main_mode">Main Show Mode</string>
+    <string name="list_count">Count Per Rown For List</string>
+    <string name="source_count">Count Per Rown For Source</string>
+    <string name="image_size">Image Size(not work)</string>
+
+
+    <string name="c1">Column 1</string>
+    <string name="c2">Column 2</string>
+    <string name="c3">Column 3</string>
+    <string name="c4">Column 4</string>
+    <string name="c5">Column 5</string>
+    <string name="c6">Column 6</string>
+    <string name="c7">Column 7</string>
+    <string name="c8">Column 8</string>
+    <string name="c9">Column 9</string>
+    <string name="c10">Column 10</string>
+    <string name="c11">Column 11</string>
+    <string name="c12">Column 12</string>
+    <string name="c13">Column 13</string>
+    <string name="c14">Column 14</string>
+    <string name="c15">Column 15</string>
+    <string name="c16">Column 16</string>
+
+    <string name="app_input_name">Tv Input Method</string>
+
+    <string name="is_active">Actived: </string>
+    <string name="is_default">;  Default Input: </string>
+
+    <string name="connect_addr">Connect IP: </string>
+    <string name="inputmethod_not_start">Not Started !!!</string>
+    <string name="waiting">Starting please wait...</string>
+
+    <string name="select">Select Input</string>
+    <string name="default_ime">Set Default Input</string>
+
+    <string name="enable_input">Click and Select \"Tv Input Method\"</string>
+    <string name="setup_default">Click and Set default Input \"Tv Input Method\"</string>
+
+</resources>

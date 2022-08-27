@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/serverurl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置地址" />
+
+        <EditText
+            android:id="@+id/websrc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/serverurl"
+            android:layout_weight="6"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="网站源地址" />
+
+        <Button
+            android:id="@+id/fetch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/websrc"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="网址更新"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/webtext"
+            android:layout_marginBottom="100dp"
+            android:inputType="textMultiLine"
+            android:text="两种方法任选一种。第一种是把json代码写入远程网址更新（推荐）第二种方法把json代码直接写入文本框（如果第一种方法不行就第二种）如果两种都不行就卸载吧，这个APP可能跟你无缘！"
+            tools:text="两种方法任选一种。第一种是把json代码写入远程网址更新（推荐）第二种方法把json代码直接写入文本框（如果第一种方法不行就第二种）如果两种都不行就卸载吧，这个APP可能跟你无缘！" />
+
+
+        <EditText
+            android:id="@+id/webtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/websrc"
+            android:layout_marginTop="20dp"
+            android:layout_weight="6"
+            android:inputType="textMultiLine"
+            android:text="网站源代码" />
+
+
+        <Button
+            android:id="@+id/fetchtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fetch"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/webtext"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="代码更新" />
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

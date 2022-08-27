@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">网页解析器</string>
+    <string name="btn_setting">设置</string>
+    <string name="btn_reload">重新加载</string>
+    <string name="btn_del">清空</string>
+    <string name="btn_servicer">网站源</string>
+    <string name="btn_input">输入法</string>
+    <string name="btn_history">历史记录</string>
+    <string name="image">图片</string>
+    <string name="text">文字</string>
+
+    <string name="main_mode">主页显示模式</string>
+    <string name="list_count">列表页显示列</string>
+    <string name="source_count">内容页显示列</string>
+    <string name="image_size">图片大小【暂未实现】</string>
+
+    <string name="c1">1列</string>
+    <string name="c2">2列</string>
+    <string name="c3">3列</string>
+    <string name="c4">4列</string>
+    <string name="c5">5列</string>
+    <string name="c6">6列</string>
+    <string name="c7">7列</string>
+    <string name="c8">8列</string>
+    <string name="c9">9列</string>
+    <string name="c10">10列</string>
+    <string name="c11">11列</string>
+    <string name="c12">12列</string>
+    <string name="c13">13列</string>
+    <string name="c14">14列</string>
+    <string name="c15">15列</string>
+    <string name="c16">16列</string>
+
+
+    <string name="app_input_name">Tv远程输入法</string>
+
+    <string name="is_active">是否激活: </string>
+    <string name="is_default">;  默认输入法: </string>
+
+    <string name="connect_addr">连接的地址为: </string>
+    <string name="inputmethod_not_start">输入法未启动 !!!</string>
+    <string name="waiting">服务器启动未完成, 请等待...</string>
+
+    <string name="select">选中输入法</string>
+    <string name="default_ime">设置默认输入法</string>
+
+    <string name="enable_input">点击 选中输入法 勾选 \"Tv远程输入法\"</string>
+    <string name="setup_default">点击 设置默认输入法 勾选 \"Tv远程输入法\"</string>
+</resources>

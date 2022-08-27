@@ -1,0 +1,277 @@
+[
+  {
+    "name": "66YS",
+    "title": "66影视网",
+    "link": "https://www.66e.cc",
+    "description": "66影视:www.66e.cc",
+    "localImageResource": "m66ys",
+    "presenter": "Movie",
+    "inword":".m3u8,.mp4",
+    "uninword":"",
+    "next":"detail",
+    "thumb":"https://www.6vdy.org/skin/66scc/images/logo.png",
+    "category": [{"name":"喜剧片","link":"https://www.66s.cc/xijupian/"},{"name":"动作片","link":"https://www.66s.cc/dongzuopian/"},{"name":"爱情片","link":"https://www.66s.cc/aiqingpian/"},{"name":"科幻片","link":"https://www.66s.cc/kehuanpian/"},{"name":"恐怖片","link":"https://www.66s.cc/kongbupian/"},{"name":"剧情片","link":"https://www.66s.cc/juqingpian/"},{"name":"战争片","link":"https://www.66s.cc/zhanzhengpian/"},{"name":"纪录片","link":"https://www.66s.cc/jilupian/"},{"name":"动画片","link":"https://www.66s.cc/donghuapian/"},{"name":"电视剧","link":"https://www.66s.cc/dianshiju/"}, {"name":"福利","link":"https://www.66s.cc/fuli/"},{"name":"综艺","link":"https://www.66s.cc/ZongYi/"}],
+    "list": {
+      "pagerule": "index_#page.html",
+      "pageone": "",
+      "pagesize": 8,
+      "useragent": "default",
+      "videoscontainer":{"selector":"li.post.box.row.fixed-hight","attrName":"", "filter": "" },
+      "title":{"selector":"a.zoom","attrName":"title","filter": "" },
+      "thumb":{"selector":"img","attrName":"src","filter": "" },
+      "link":{"selector":"a.zoom","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "videoscontainer":{"selector":"a.lBtn","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "play": {
+      "useragent": "mobile",
+      "player": "ijk"
+    },
+    "search": {
+      "useragent": "default",
+      "pagerule": "",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"src","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    }
+  },
+  {
+    "name": "NFmovies",
+    "title": "奈菲影视",
+    "link": "https://www.nfmovies.com",
+    "description": "奈菲影视android5以下不要用",
+    "localImageResource": "nfmovies",
+    "presenter": "Movie",
+    "inword":".m3u8,.mp4",
+    "uninword":"",
+    "next":"detail",
+    "thumb":"https://www.nfmovies.com/templets/default/images/logos/06.png",
+    "category": [{"name":"电影","link":"https://www.nfmovies.com/list/?1"},{"name":"电视剧","link":"https://www.nfmovies.com/list/?2"},{"name":"综艺","link":"https://www.nfmovies.com/list/?3"},{"name":"动漫","link":"https://www.nfmovies.com/list/?4"}],
+    "list": {
+      "pagerule": "-#page.html",
+      "pageone": ".html",
+      "pagesize": 8,
+      "useragent": "default",
+      "videoscontainer":{"selector":"ul.myui-vodlist>li","attrName":"", "filter": "" },
+      "title":{"selector":"a.myui-vodlist__thumb","attrName":"title","filter": "" },
+      "thumb":{"selector":"a.myui-vodlist__thumb","attrName":"data-original","filter": "" },
+      "link":{"selector":"a.myui-vodlist__thumb","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "videoscontainer":{"selector":"a[target=_self]","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "play": {
+      "useragent": "mobile",
+      "player": "ijk"
+    },
+    "search": {
+      "useragent": "default",
+      "pagerule": "https://www.nfmovies.com/search.php?page=#mpageno&searchword=#msearchword&searchtype=",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"a.myui-vodlist__thumb","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    }
+  },
+  {
+    "name": "Duboku",
+    "title": "独播库",
+    "link": "https://www.duboku.tv",
+    "description": "独播库",
+    "localImageResource": "duboku",
+    "presenter": "Movie",
+    "inword":".m3u8,.mp4",
+    "uninword":"",
+    "next":"detail",
+    "thumb":"https://www.duboku.tv/template/mytheme/statics/image/20191029/d431e630a.png",
+    "category": [{"name": "电影", "link": "https://www.duboku.tv/vodtype/1"},{"name": "电视剧", "link": "https://www.duboku.tv/vodtype/2"},{"name": "综艺", "link": "https://www.duboku.tv/vodtype/3"},{"name": "动漫", "link": "https://www.duboku.tv/vodtype/4"}],
+    "list": {
+      "pagerule": "-#page.html",
+      "fetchtype":"default",
+      "pageone": ".html",
+      "pagesize": 8,
+      "useragent": "default",
+      "videoscontainer":{"selector":"ul.myui-vodlist li a.myui-vodlist__thumb","attrName":"", "filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "videoscontainer":{"selector":"ul.myui-content__list li a","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"text","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "play": {
+      "useragent": "default",
+      "filter": "media_url=(.*)&url=",
+      "player": "exo2"
+    },
+    "search": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "pagerule": "https://www.duboku.tv/vodsearch/#msearchword----------#mpageno---.html",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"a.myui-vodlist__thumb","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    }
+  },
+  {
+    "name": "YJ",
+    "title": "1090影视",
+    "link": "http://1090ys1.com",
+    "description": "1090影视",
+    "localImageResource": "yj",
+    "presenter": "Movie",
+    "inword":".m3u8,.mp4",
+    "uninword":"",
+    "next":"detail",
+    "thumb":"http://1090ys1.com/template/skins/ct258/images/logo.png",
+    "category": [{"name":"电影","link":"http://1090ys1.com/whole/1_______0_addtime"},{"name":"美剧","link":"http://1090ys.com/whole/2_______0_addtime"},{"name":"韩剧","link":"http://1090ys.com/whole/3_______0_addtime"},{"name": "日剧", "link": "http://1090ys.com/whole/4_______0_addtime"},{"name": "国产剧", "link": "http://1090ys.com/whole/7_______0_addtime"},{"name":"动漫","link":"http://1090ys.com/whole/8_______0_addtime"}],
+    "list": {
+      "pagerule": "_#page.html",
+      "fetchtype":"browser",
+      "pageone": "_1.html",
+      "pagesize": 8,
+      "useragent": "default",
+      "videoscontainer":{"selector":"a.stui-vodlist__thumb","attrName":"", "filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "fetchtype":"browser",
+      "videoscontainer":{"selector":"div.tab-content a","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"text","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "play": {
+      "useragent": "mobile",
+      "filter": "",
+      "player": "ijk"
+    },
+    "search": {
+      "useragent": "default",
+      "fetchtype":"browser",
+      "pagerule": "http://1090ys1.com/?c=search&wd=#msearchword&sort=addtime&order=desc&page=#mpageno",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"a.stui-vodlist__thumb","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    }
+  },
+  {
+    "name": "Bde4",
+    "title": "哔嘀影视",
+    "openBrowser": "yes",
+    "link": "https://bde4.com",
+    "description": "哔嘀影视",
+    "localImageResource": "bde4",
+    "presenter": "Movie",
+    "inword":".m3u8,.mp4",
+    "uninword":"",
+    "next":"detail",
+    "thumb":"http://1090ys1.com/template/skins/ct258/images/logo.png",
+    "category": [{"name": "电影", "link": "https://bde4.com/s/all/#pageurle?type=0"},{"name": "电视剧", "link": "https://bde4.com/s/all/#pageurle?type=1"}],
+    "list": {
+      "pagerule": "#page",
+      "fetchtype":"default",
+      "pageone": "1",
+      "pagesize": 8,
+      "useragent": "default",
+      "videoscontainer":{"selector":"div.card","attrName":"", "filter": "" },
+      "title":{"selector":"a.image","attrName":"title","filter": "" },
+      "thumb":{"selector":"img","attrName":"src","filter": "" },
+      "link":{"selector":"a.image","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "videoscontainer":{"selector":"a.secondary","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"text","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "play": {
+      "useragent": "mobile",
+      "filter": "",
+      "player": "ijk"
+    },
+    "search": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "pagerule": "http://bde4.com/search/#msearchword/#mpageno",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"div.card","attrName":"","filter": "" },
+      "title":{"selector":"a.image","attrName":"title","filter": "" },
+      "thumb":{"selector":"img","attrName":"src","filter": "" },
+      "link":{"selector":"a.image","attrName":"href","filter": "" }
+    }
+  },
+  {
+    "name": "Zxzj",
+    "title": "在线之家",
+    "link": "https://www.zxzj.me",
+    "description": "在线之家",
+    "localImageResource": "zxzj",
+    "presenter": "Movie",
+    "inword":".m3u8,.mp4",
+    "uninword":"",
+    "next":"detail",
+    "thumb":"",
+    "category": [{"name": "电影", "link": "https://www.zxzj.me/list/1"},{"name": "美剧", "link": "https://www.zxzj.me/list/2"},{"name": "韩剧", "link": "https://www.zxzj.me/list/3"},{"name": "日剧", "link": "https://www.zxzj.me/list/4"},{"name": "泰剧", "link": "https://www.zxzj.me/list/5"},{"name": "动漫", "link": "https://www.zxzj.me/list/6"}],
+    "list": {
+      "pagerule": "-#page.html",
+      "fetchtype":"default",
+      "pageone": "-1.html",
+      "pagesize": 8,
+      "useragent": "default",
+      "videoscontainer":{"selector":"a.stui-vodlist__thumb","attrName":"", "filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "videoscontainer":{"selector":"div.play-content a","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"text","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "play": {
+      "useragent": "mobile",
+      "filter": "",
+      "player": "vlc"
+    },
+    "search": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "pagerule": "http://1090ys1.com/?c=search&wd=#msearchword&sort=addtime&order=desc&page=#mpageno",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"a.stui-vodlist__thumb","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    }
+  }
+]
