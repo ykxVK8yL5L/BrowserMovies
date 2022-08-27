@@ -5,7 +5,6 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-    ndkVersion '23.2.8568313'
     defaultConfig {
         applicationId "com.github.browsermovies"
         minSdkVersion 17
@@ -20,8 +19,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
-       sourceCompatibility JavaVersion.VERSION_1_8
-       targetCompatibility JavaVersion.VERSION_1_8
+    //    sourceCompatibility JavaVersion.VERSION_1_8
+    //    targetCompatibility JavaVersion.VERSION_1_8
     }
 
 
