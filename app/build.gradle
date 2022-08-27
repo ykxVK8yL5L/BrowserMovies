@@ -29,7 +29,7 @@ android {
         chebibei {
             keyAlias 'chebibei'
             keyPassword 'chebibei123456'
-            storeFile file('../jks/chebibei.jks')
+            storeFile file('../chebibei.jks')
             storePassword 'chebibei123456'
         }
     }
