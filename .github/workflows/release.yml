@@ -19,7 +19,7 @@ jobs:
       - name: Set up JDK 1.8
         uses: joschi/setup-jdk@v2
         with:
-          java-version: '8'
+          java-version: '7'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
