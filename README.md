@@ -5,5 +5,3 @@
 https://youtu.be/7t45DLmRTxM    
 https://youtu.be/wNpCUbuQezw    
 https://youtu.be/AYDH0FO4I04   
-
-# 测试了一下没有编译成功 主要是代码太老了 跟现在的各种dk不兼容 如果要使用的话 建议从头新建项目 然后拷贝我的代码吧
