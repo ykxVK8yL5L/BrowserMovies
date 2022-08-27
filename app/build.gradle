@@ -12,9 +12,9 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        ndk {
-            abiFilters 'armeabi-v7a', 'x86', 'armeabi'
-        }
+        //ndk {
+        //   abiFilters 'armeabi-v7a', 'x86', 'armeabi'
+        //}
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,9 +25,21 @@ android {
 
 
     buildTypes {
-        release {
-            minifyEnabled false
+        debug {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+        }
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
         }
     }
     sourceSets {
