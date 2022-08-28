@@ -70,6 +70,7 @@ class ServerActivity : Activity() {
                 try {
                     var updatetext = webtext.text.toString()
                     var file = File(MainApplication.getRootFile(),"sites.json")
+                     Log.d("server write filepathis",MainApplication.getRootFile().absolutePath)
                     if (file.exists() && file.canWrite()) {
                         val fOut = FileOutputStream(file)
                         val outputStreamWriter = OutputStreamWriter(fOut)

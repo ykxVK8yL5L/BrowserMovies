@@ -134,7 +134,8 @@ class MainFragment : VerticalGridFragment() {
     private fun loadData(){
         try {
             val json = Utils.inputStreamToString(File(activity.filesDir,"sites.json").inputStream())
-            //Log.d("filpathis",activity.filesDir.absolutePath)
+            Log.d("filepathis",activity.filesDir.absolutePath)
+            Log.d("jsonis",json)
             //val json = Utils.inputStreamToString(getResources().openRawResource(R.raw.sites))
             val sites:List<Site> = Gson().fromJson<Array<Site>>(json, Array<Site>::class.java).toMutableList()
             for (site in sites) {
