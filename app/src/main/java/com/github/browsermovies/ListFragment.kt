@@ -45,7 +45,6 @@ class ListFragment : BrowseFragment() {
     private var mSelectedSite: Site? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        super.onCreate(savedInstanceState)
         headersState = BrowseFragment.HEADERS_ENABLED
         isHeadersTransitionOnBackEnabled = true
         brandColor = resources.getColor(R.color.colorPrimary)
