@@ -31,7 +31,7 @@ data class Site(
                 ", name='" + name + '\'' +
                 ", title='" + title + '\'' +
                 ", openBrowser='" + openBrowser + '\'' +
-                ", linkurl='" + link + '\'' +
+                ", link='" + link + '\'' +
                 ", description='" + description + '\'' +
                 ", localImageResource='" + localImageResource + '\'' +
                 ", presenter='" + presenter + '\'' +

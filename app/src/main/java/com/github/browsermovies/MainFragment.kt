@@ -138,7 +138,7 @@ class MainFragment : VerticalGridFragment() {
             //val json = Utils.inputStreamToString(getResources().openRawResource(R.raw.sites))
             val sites:List<Site> = Gson().fromJson<Array<Site>>(json, Array<Site>::class.java).toMutableList()
             for (site in sites) {
-                Log.d("createsite?",site.name)
+                Log.d("createsite site:",site.toString())
                 mAdapter!!.add(site)
             }
             setSelectedPosition(0)
