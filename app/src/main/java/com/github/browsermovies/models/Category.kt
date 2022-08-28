@@ -37,7 +37,7 @@ data class Category(
                 ", name='" + name + '\'' +
                 ", title='" + title + '\'' +
                 ", next='" + next + '\'' +
-                ", linkurl='" + link + '\'' +
+                ", link='" + link + '\'' +
                 ", localImageResource='" + localImageResource + '\'' +
                 '}'
     }

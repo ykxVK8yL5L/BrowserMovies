@@ -19,7 +19,7 @@ jobs:
       - uses: nttld/setup-ndk@v1
         id: setup-ndk
         with:
-          ndk-version: r20b
+          ndk-version: r18b
           add-to-path: false
       - name: Build With Gradle
         env:
