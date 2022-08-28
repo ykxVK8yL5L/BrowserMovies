@@ -124,7 +124,6 @@ class MainFragment : VerticalGridFragment() {
             intent.putExtra("site", card)
             startActivity(intent)
         }
-
         loadData()
     }
 
@@ -139,7 +138,7 @@ class MainFragment : VerticalGridFragment() {
             //val json = Utils.inputStreamToString(getResources().openRawResource(R.raw.sites))
             val sites:List<Site> = Gson().fromJson<Array<Site>>(json, Array<Site>::class.java).toMutableList()
             for (site in sites) {
-                //Log.d("create?","create")
+                Log.d("createsite?",site.name)
                 mAdapter!!.add(site)
             }
             setSelectedPosition(0)
