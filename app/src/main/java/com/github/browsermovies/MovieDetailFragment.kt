@@ -13,7 +13,7 @@ import android.webkit.*
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
-//import com.github.browsermovies.R
+import com.github.browsermovies.R
 import androidx.leanback.app.VerticalGridFragment
 import androidx.leanback.widget.ArrayObjectAdapter
 import androidx.leanback.widget.FocusHighlight
