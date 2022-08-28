@@ -100,7 +100,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.1'
     implementation 'com.squareup.okhttp3:okhttp:3.12.2'
     implementation "com.squareup.okhttp3:logging-interceptor:3.12.2"
-    implementation 'com.google.android.gms:play-services-ads:19.0.0'
+ //   implementation 'com.google.android.gms:play-services-ads:19.0.0'
     implementation 'com.android.support:multidex:1.0.3'
     implementation project(path: ':crosswalk-23.53.589.4')
     implementation 'com.google.zxing:core:3.3.0'
