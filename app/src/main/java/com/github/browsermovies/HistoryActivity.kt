@@ -6,7 +6,6 @@ import android.os.Bundle
 
 
 class HistoryActivity : Activity() {
-    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_history)
         fragmentManager.beginTransaction().add(R.id.historyFragment,HistroyFragment() as Fragment, "HISTORY").commit();

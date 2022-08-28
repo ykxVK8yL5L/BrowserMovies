@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class ListActivity : Activity() {
-    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_category)
         if (savedInstanceState == null) {

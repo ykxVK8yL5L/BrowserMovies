@@ -8,7 +8,6 @@ import com.github.browsermovies.m_detail.MovieDetailFragment
 
 
 class MovieDetailActivity : Activity() {
-    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
             val fragement = MovieDetailFragment() as Fragment
