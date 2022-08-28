@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import android.util.Log
 import com.github.browsermovies.libs.ApiService
 import com.github.browsermovies.libs.MainApplication
 import com.github.browsermovies.models.Site
