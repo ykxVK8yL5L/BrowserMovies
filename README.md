@@ -11,3 +11,9 @@ https://youtu.be/AYDH0FO4I04
 
 #关于签名： 由于是展示项目用的签名是网上找的 毫无安全可言 请勿公开使用。  
 
+
+![image](https://github.com/ykxVK8yL5L/BrowserMovies/blob/main/screenshot/ScreenShot1.png)
+![image](https://github.com/ykxVK8yL5L/BrowserMovies/blob/main/screenshot/ScreenShot2.png)
+![image](https://github.com/ykxVK8yL5L/BrowserMovies/blob/main/screenshot/ScreenShot3.png)
+![image](https://github.com/ykxVK8yL5L/BrowserMovies/blob/main/screenshot/ScreenShot4.png)
+![image](https://github.com/ykxVK8yL5L/BrowserMovies/blob/main/screenshot/ScreenShot5.png)
