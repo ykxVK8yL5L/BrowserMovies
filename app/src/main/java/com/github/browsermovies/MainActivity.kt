@@ -13,7 +13,4 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
         fragmentManager.beginTransaction().add(R.id.mainfragment,MainFragment(),"MainActivity").commit()
     }
-
-
-
 }
