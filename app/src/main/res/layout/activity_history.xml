@@ -17,5 +17,4 @@
         android:layout_height="wrap_content"
         android:background="@drawable/default_btn"
         android:text="清空记录" />
-    <include layout="@layout/ad"/>
 </RelativeLayout>

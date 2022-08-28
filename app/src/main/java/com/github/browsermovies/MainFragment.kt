@@ -35,6 +35,7 @@ class MainFragment : VerticalGridFragment() {
     private lateinit var delallBtn: Button
     private lateinit var settingBtn: Button
     private lateinit var inputBtn: Button
+    private lateinit var searchBtn: Button
     private lateinit var showPresenter: Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,6 +94,15 @@ class MainFragment : VerticalGridFragment() {
             }
 
         })
+
+
+//        searchBtn = activity.findViewById(R.id.btn_search)
+//        searchBtn.setOnClickListener(View.OnClickListener {
+//            val intent = Intent(activity,SearchActivity::class.java)
+//            startActivity(intent)
+//        })
+
+
 
         val listType = prefs.getString("prefs_main_list_type_key", "c0")!!.replace("c","")
 

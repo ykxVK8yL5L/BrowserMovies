@@ -12,6 +12,7 @@
         android:paddingTop="25dp"
         android:orientation="vertical">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,9 +66,19 @@
                 android:background="@drawable/default_btn"
                 android:text="@string/btn_input" />
 
+<!--            <Button-->
+<!--                android:id="@+id/btn_search"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/default_btn"-->
+<!--                android:text="@string/btn_search" />-->
+
 
 
         </LinearLayout>
+
+
         <FrameLayout
             android:id="@+id/mainfragment"
             android:layout_width="match_parent"
@@ -75,9 +86,6 @@
 
         </FrameLayout>
     </LinearLayout>
-
-
-    <include layout="@layout/ad" />
 </RelativeLayout>
 
 

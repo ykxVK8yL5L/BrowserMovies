@@ -112,11 +112,13 @@ data class DetailRule(
 
 data class PlayRule(
     var useragent: String? = "default",
+    var type: String? = "default",
     var filter: String? = "",
     var player: String? = "ijk"
 ): Serializable {
     override fun toString(): String {
-        return "DetailRule{" +
+        return "PlayRule{" +
+                "type='" + type + '\'' +
                 "useragent='" + useragent + '\'' +
                 "player='" + player + '\'' +
         '}'

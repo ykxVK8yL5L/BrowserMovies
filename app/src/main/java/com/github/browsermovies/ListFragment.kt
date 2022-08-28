@@ -22,6 +22,7 @@ import com.github.browsermovies.libs.HistoryManager
 import com.github.browsermovies.models.*
 import com.github.browsermovies.presenters.CardPresenter
 import com.github.browsermovies.presenters.TextPresenter
+import com.github.browsermovies.utils.LogUtil
 import com.github.browsermovies.utils.WebFetcher
 import com.github.browsermovies.utils.XwalkBrowserFetcher
 import com.google.gson.Gson
@@ -225,7 +226,7 @@ class ListFragment : BrowseFragment() {
         }
 
         private fun handlePageResult(result:String){
-            //LogUtil().loge("listresultis",result)
+            LogUtil().loge("listresultis",result)
             processBar.setVisibility(View.GONE);
 
             try {
@@ -310,6 +311,7 @@ class ListFragment : BrowseFragment() {
                     }
 
 
+                    //Log.d("suolvetuis",thumbsrc)
 
 
                     var item = JSONObject()

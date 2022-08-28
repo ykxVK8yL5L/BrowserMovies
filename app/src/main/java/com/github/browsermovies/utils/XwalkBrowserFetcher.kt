@@ -142,6 +142,7 @@ class XwalkBrowserFetcher constructor(context: Context){
 
             override fun onReceivedResponseHeaders(view: XWalkView?,request: XWalkWebResourceRequest?,response: XWalkWebResourceResponse?) {
                 var url = request!!.url.toString()
+                //Log.d("loadresourcesis",url)
                 if(hasInWord(url!!)&&!hasUninWord(url!!)){
                     if (!hasHandle) {
                         hasHandle = true

@@ -6,6 +6,7 @@
     <string name="btn_servicer">网站源</string>
     <string name="btn_input">输入法</string>
     <string name="btn_history">历史记录</string>
+    <string name="btn_search">搜索</string>
     <string name="image">图片</string>
     <string name="text">文字</string>
 

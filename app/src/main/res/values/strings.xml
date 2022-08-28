@@ -6,6 +6,10 @@
     <string name="btn_servicer">Servicer</string>
     <string name="btn_history">History</string>
     <string name="btn_input">Input</string>
+    <string name="btn_search">Search</string>
+
+
+
 
     <string name="image">Image</string>
     <string name="text">Text</string>
@@ -47,5 +51,7 @@
 
     <string name="enable_input">Click and Select \"Tv Input Method\"</string>
     <string name="setup_default">Click and Set default Input \"Tv Input Method\"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

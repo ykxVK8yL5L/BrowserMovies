@@ -32,6 +32,7 @@ class BrowserActivity : XWalkActivity() {
     private var mSelectedMovie: Movie? = null
     private lateinit var sysConfig: ApiService
     //private var useragent:String = ""
+    private var loadUrl:String = ""
     var inwords = "m3u8,mp4"
     var uninwords = ""
     var hasHandle = false
@@ -44,13 +45,16 @@ class BrowserActivity : XWalkActivity() {
         cordovaWebView = findViewById<View>(R.id.xwalkWebView) as XWalkView
         mSelectedMovie = intent.getSerializableExtra("movie") as Movie
         mSelectedSite = intent.getSerializableExtra("site") as Site
+        mSelectedSite = intent.getSerializableExtra("site") as Site
+        loadUrl = intent.getStringExtra("loadUrl")
         history = intent.getSerializableExtra("history") as History
         inwords = mSelectedSite!!.inword!!
         uninwords = mSelectedSite!!.uninword!!
         //webview.load("https://www.zxzj.me/video/2767-1-1.html",null)
+
     }
     override fun onXWalkReady() {
-        cordovaWebView.load(mSelectedMovie!!.videoUrl,null)
+        cordovaWebView.load(loadUrl,null)
         cordovaWebView.settings.javaScriptEnabled = true
 
         var useragent = sysConfig.DefaultUserAgent()

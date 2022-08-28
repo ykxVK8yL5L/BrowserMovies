@@ -99,6 +99,7 @@ class MovieDetailFragment : VerticalGridFragment() {
                 intent.putExtra("history",history)
                 intent.putExtra("movie",mSelectedMovie)
                 intent.putExtra("site",mSelectedSite)
+                intent.putExtra("loadUrl",card.videoUrl)
                 startActivity(intent)
             }else{
                 if(this.mSelectedSite!!.detail!!.onclick=="yes"){
@@ -147,7 +148,13 @@ class MovieDetailFragment : VerticalGridFragment() {
                 intent.setDataAndType(Uri.parse(url), "video/*");
                 startActivity(intent)
             }else{
-                fetchBrowser.fetchResourceFromUrl(url,this.mSelectedSite!!.play!!.useragent!!,{result->handlePlayResult(result)})
+
+                if(mSelectedSite!!.play!!.type=="default"){
+                    fetchBrowser.fetchResourceFromUrl(url,this.mSelectedSite!!.play!!.useragent!!,{result->handlePlayResult(result)})
+                }else{
+                    defaultFetcher.fetchHtmlFromUrl(url!!,this.mSelectedSite!!.play!!.useragent!!,{result->handleHtmlPlayResult(result)})
+                }
+
             }
         }catch (e:Exception){
             Toast.makeText(activity,"获取播放信息失败，请检查配置",Toast.LENGTH_SHORT).show()
@@ -155,6 +162,38 @@ class MovieDetailFragment : VerticalGridFragment() {
 
     }
 
+    private fun handleHtmlPlayResult(result:String){
+        //Log.d("playurlis",result)
+        processBar.setVisibility(View.GONE)
+        try {
+            var playurl = result
+            if(!mSelectedSite!!.play!!.filter.isNullOrEmpty()){
+                var partn = mSelectedSite!!.play!!.filter
+                val findgroup = Pattern.compile(partn).matcher(playurl)
+                while (findgroup.find()){
+                    playurl = findgroup.group(1)
+                    break
+                }
+                //playurl = playurl.unescapeUrl()
+                playurl = URLDecoder.decode(playurl).replace("\\","")
+                //Log.d("playurlis",playurl)
+            }
+            if(!playurl.isNullOrEmpty()){
+                Toast.makeText(activity,playurl, Toast.LENGTH_SHORT).show()
+                val historyManager = HistoryManager(activity)
+                historyManager.setHistory(history)
+                historyManager.saveWithTime(0)
+                var intent = Intent(Intent.ACTION_VIEW);
+                intent.setDataAndType(Uri.parse(playurl), "video/*");
+                startActivity(intent)
+            }else{
+                Toast.makeText(activity,"未找到播放源，请稍后重试", Toast.LENGTH_SHORT).show()
+            }
+        }catch (e:java.lang.Exception){
+            Toast.makeText(activity,"无法解析视频地址，请稍后再试或检查是否安装播放器", Toast.LENGTH_SHORT).show()
+        }
+
+    }
 
     private fun handlePlayResult(result:String){
         //Log.d("playurlis",result)
@@ -169,7 +208,7 @@ class MovieDetailFragment : VerticalGridFragment() {
                     break
                 }
                 //playurl = playurl.unescapeUrl()
-                playurl = URLDecoder.decode(playurl)
+                playurl = URLDecoder.decode(playurl).replace("\\","")
                 //Log.d("playurlis",playurl)
             }
             if(!playurl.isNullOrEmpty()){
