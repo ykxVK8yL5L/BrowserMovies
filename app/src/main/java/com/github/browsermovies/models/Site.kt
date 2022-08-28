@@ -20,7 +20,7 @@ data class Site(
     val category: List<Category>? = null,
     var list:ListRule? = null,
     var detail:DetailRule? = null,
-    //var play:PlayRule? = null,
+    var play:PlayRule? = null,
     var search:SearchRule? = null
 
 ) : Serializable {
