@@ -225,7 +225,7 @@ class ListFragment : BrowseFragment() {
         }
 
         private fun handlePageResult(result:String){
-            LogUtil().loge("listresultis",result)
+            //LogUtil().loge("listresultis",result)
             processBar.setVisibility(View.GONE);
 
             try {
