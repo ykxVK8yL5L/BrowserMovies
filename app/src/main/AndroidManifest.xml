@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.browsermovies">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+
+    <application
+        android:name=".libs.MainApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".InputSettingActivity"></activity>
+        <meta-data
+            android:name="com.github.browsermovies.libs.OkHttpAppGlideModule"
+            android:value="AppGlideModule" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+
+                <!-- Adding -->
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+                <!-- End Adding -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".settings.SysSettingsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Theme.Example.LeanbackPreferences" />
+        <activity
+            android:name=".BrowserActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ListActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MovieDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ServerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".HistoryActivity"
+            android:screenOrientation="landscape" />
+
+        <service
+            android:name=".services.ServerInputMethodService"
+            android:label="@string/app_input_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+    </application>
+
+</manifest>
