@@ -6,22 +6,22 @@ import java.io.Serializable
 
 data class Site(
     var id: Long = 0,
-    var name: String? = null,
-    var description: String? = null,
-    var link: String? = null,
-    var title: String? = null,
+    var name: String? = "",
+    var description: String? = "",
+    var link: String? = "",
+    var title: String? = "",
     var openBrowser:String = "no",
-    var localImageResource: String? = null,
+    var localImageResource: String? = "",
     var presenter: String? = "Movie",
     var inword: String? = "m3u8,mp4",
-    var uninword: String? = null,
+    var uninword: String? = "",
     var next: String? = "detail",
-    var thumb: String? = null,
-    val category: List<Category>? = null,
-    var list:ListRule? = null,
-    var detail:DetailRule? = null,
-    var play:PlayRule? = null,
-    var search:SearchRule? = null
+    var thumb: String? = "",
+    val category: List<Category>? = "",
+    var list:ListRule? = "",
+    var detail:DetailRule? = "",
+    var play:PlayRule? = "",
+    var search:SearchRule? = ""
 
 ) : Serializable {
 
@@ -60,12 +60,12 @@ data class ListRule(
     var useragent: String? = "default",
     var fetchtype: String? = "default",
     var pagefilter:String? = "",
-    var pagerule: String? = null,
-    var pageone: String? = null,
-    var videoscontainer: SelectorWithAtrr? = null,
-    var thumb: SelectorWithAtrr? = null,
-    var link: SelectorWithAtrr? = null,
-    var title:SelectorWithAtrr?=null,
+    var pagerule: String? = "",
+    var pageone: String? = "",
+    var videoscontainer: SelectorWithAtrr? = "",
+    var thumb: SelectorWithAtrr? = "",
+    var link: SelectorWithAtrr? = "",
+    var title:SelectorWithAtrr?="",
     var pagesize:Int = 0
 ): Serializable {
     override fun toString(): String {
@@ -87,10 +87,10 @@ data class ListRule(
 data class DetailRule(
     var useragent: String? = "default",
     var fetchtype: String? = "default",
-    var videoscontainer: SelectorWithAtrr? = null,
-    var clickcontainer: SelectorWithAtrr? = null,
-    var link: SelectorWithAtrr? = null,
-    var title:SelectorWithAtrr?=null,
+    var videoscontainer: SelectorWithAtrr? = "",
+    var clickcontainer: SelectorWithAtrr? = "",
+    var link: SelectorWithAtrr? = "",
+    var title:SelectorWithAtrr?="",
     var onclick:String="no",
     var play:String = "no"
 ): Serializable {
@@ -106,7 +106,7 @@ data class DetailRule(
         '}'
     }
     companion object {
-        internal const val serialVersionUID = 727566134345465676
+        internal const val serialVersionUID = 727566134345465677
     }
 }
 
@@ -124,7 +124,7 @@ data class PlayRule(
         '}'
     }
     companion object {
-        internal const val serialVersionUID = 727566134345465676
+        internal const val serialVersionUID = 727566134345465678
     }
 }
 
@@ -133,12 +133,12 @@ data class PlayRule(
 data class SearchRule(
     var useragent: String? = "default",
     var fetchtype: String? = "default",
-    var pagerule: String? = null,
-    var pageone: String? = null,
-    var videoscontainer: SelectorWithAtrr? = null,
-    var thumb: SelectorWithAtrr? = null,
-    var link: SelectorWithAtrr? = null,
-    var title:SelectorWithAtrr?=null,
+    var pagerule: String? = "",
+    var pageone: String? = "",
+    var videoscontainer: SelectorWithAtrr? = "",
+    var thumb: SelectorWithAtrr? = "",
+    var link: SelectorWithAtrr? = "",
+    var title:SelectorWithAtrr?="",
     var pagesize:Int = 0
 ): Serializable {
     override fun toString(): String {
@@ -153,7 +153,7 @@ data class SearchRule(
         '}'
     }
     companion object {
-        internal const val serialVersionUID = 727566123445465676
+        internal const val serialVersionUID = 727566123445465679
     }
 }
 
@@ -161,9 +161,9 @@ data class SearchRule(
 
 
 data class SelectorWithAtrr(
-    var selector: String? = null,
-    var attrName: String? = null,
-    var filter:String? = null
+    var selector: String? = "",
+    var attrName: String? = "",
+    var filter:String? = ""
 ): Serializable {
     override fun toString(): String {
         return "SelectorWithAtrr{" +
@@ -173,7 +173,7 @@ data class SelectorWithAtrr(
         '}'
     }
     companion object {
-        internal const val serialVersionUID = 7275661343466644
+        internal const val serialVersionUID = 7275661343466811
     }
 }
 
