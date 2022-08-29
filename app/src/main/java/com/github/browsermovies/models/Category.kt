@@ -20,13 +20,13 @@ import java.io.Serializable
  * Movie class represents video entity with title, description, image thumbs and video url.
  */
 data class Category(
-    var id: Long ,
-    var name: String,
-    var description: String,
-    var link: String,
-    var title: String,
-    var next: String,
-    var localImageResource: String
+    var id: Long = 0,
+    var name: String? = null,
+    var description: String? = null,
+    var link: String? = null,
+    var title: String? = null,
+    var next: String? = "detail",
+    var localImageResource: String? = null
 
 
 ) : Serializable {
@@ -47,6 +47,6 @@ data class Category(
     }
 
     companion object {
-        internal const val serialVersionUID = 7275661343456454
+        internal const val serialVersionUID = 7275661343455454
     }
 }
