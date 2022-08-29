@@ -5,7 +5,7 @@ import java.io.Serializable
 
 
 data class Site(
-    var id: Long = 0,
+    var id: Long? = 0,
     var name: String? = "",
     var description: String? = "",
     var link: String? = "",
