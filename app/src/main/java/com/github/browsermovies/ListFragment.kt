@@ -113,7 +113,11 @@ class ListFragment : BrowseFragment() {
             mSelectedSite = activity.intent.getSerializableExtra("site") as Site
             setupAdapter()
             Handler().postDelayed({
-                loadNextPage()
+                 try{
+                        loadNextPage();
+                    }catch (e:java.lang.Exception){
+                        Toast.makeText(activity,"网络请求出错，请稍后再试", Toast.LENGTH_SHORT).show()
+                    }
             }, 1000)
             mainFragmentAdapter.fragmentHost.notifyDataReady(mainFragmentAdapter)
         }
@@ -185,7 +189,11 @@ class ListFragment : BrowseFragment() {
                 val itemIndex = mAdapter!!.indexOf(card)
                 if ((mAdapter!!.size()-itemIndex)<mSelectedSite.list!!.pagesize) {
                     Toast.makeText(activity,"加载下一页数据",Toast.LENGTH_SHORT).show()
-                    loadNextPage();
+                    try{
+                        loadNextPage();
+                    }catch (e:java.lang.Exception){
+                        Toast.makeText(activity,"网络请求出错，请稍后再试", Toast.LENGTH_SHORT).show()
+                     }
                 }
             }
 

@@ -103,13 +103,18 @@ class MovieDetailFragment : VerticalGridFragment() {
                 startActivity(intent)
                 processBar.setVisibility(View.GONE)
             }else{
-                if(this.mSelectedSite!!.detail!!.onclick=="yes"){
-                    val jscmd = "document.querySelectorAll('"+mSelectedSite!!.detail!!.clickcontainer!!.selector+"')["+mAdapter!!.indexOf(card)+"].click()"
-                    //Log.d("jscmdis",jscmd)
-                    fetchBrowser.fetchHtmlAndClickFromUrl(mSelectedMovie?.videoUrl!!,this.mSelectedSite!!.detail!!.useragent!!,jscmd,{result->handlePlayResult(result)})
-                }else {
-                    getPlayUrl(card.videoUrl as String)
+                try{
+                    if(this.mSelectedSite!!.detail!!.onclick=="yes"){
+                        val jscmd = "document.querySelectorAll('"+mSelectedSite!!.detail!!.clickcontainer!!.selector+"')["+mAdapter!!.indexOf(card)+"].click()"
+                        //Log.d("jscmdis",jscmd)
+                        fetchBrowser.fetchHtmlAndClickFromUrl(mSelectedMovie?.videoUrl!!,this.mSelectedSite!!.detail!!.useragent!!,jscmd,{result->handlePlayResult(result)})
+                    }else {
+                        getPlayUrl(card.videoUrl as String)
+                    }
+                }catch (e:Exception){
+                    Toast.makeText(activity,"网络请求失败，请稍后再试",Toast.LENGTH_SHORT).show()
                 }
+               
             }
         }
     }
