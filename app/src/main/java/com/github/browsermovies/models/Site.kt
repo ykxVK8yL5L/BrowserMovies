@@ -5,23 +5,23 @@ import java.io.Serializable
 
 
 data class Site(
-    var id: Long,
-    var name: String,
-    var description: String,
-    var link: String,
-    var title: String,
-    var openBrowser:String,
-    var localImageResource: String,
-    var presenter: String,
-    var inword: String,
-    var uninword: String,
-    var next: String,
-    var thumb: String,
-    val category: List<Category>,
-    var list:ListRule,
-    var detail:DetailRule,
-    var play:PlayRule,
-    var search:SearchRule
+    var id: Long = 0,
+    var name: String? = "",
+    var description: String? = "",
+    var link: String? = "",
+    var title: String? = "",
+    var openBrowser:String = "no",
+    var localImageResource: String? = "",
+    var presenter: String? = "Movie",
+    var inword: String? = "m3u8,mp4",
+    var uninword: String? = "",
+    var next: String? = "detail",
+    var thumb: String? = "",
+    val category: List<Category>? = null,
+    var list:ListRule? = null,
+    var detail:DetailRule? = null,
+    var play:PlayRule? = null,
+    var search:SearchRule? = null
 
 ) : Serializable {
 
@@ -57,15 +57,15 @@ data class Site(
 
 
 data class ListRule(
-    var useragent: String,
-    var fetchtype: String,
-    var pagefilter:String,
-    var pagerule: String,
-    var pageone: String,
-    var videoscontainer: SelectorWithAtrr,
-    var thumb: SelectorWithAtrr,
-    var link: SelectorWithAtrr,
-    var title:SelectorWithAtrr,
+    var useragent: String? = "default",
+    var fetchtype: String? = "default",
+    var pagefilter:String? = "",
+    var pagerule: String? = "",
+    var pageone: String? = "",
+    var videoscontainer: SelectorWithAtrr? =null,
+    var thumb: SelectorWithAtrr? = null,
+    var link: SelectorWithAtrr? = null,
+    var title:SelectorWithAtrr?=null,
     var pagesize:Int = 0
 ): Serializable {
     override fun toString(): String {
@@ -85,14 +85,14 @@ data class ListRule(
 }
 
 data class DetailRule(
-    var useragent: String,
-    var fetchtype: String,
-    var videoscontainer: SelectorWithAtrr,
-    var clickcontainer: SelectorWithAtrr,
-    var link: SelectorWithAtrr,
-    var title:SelectorWithAtrr,
-    var onclick:String,
-    var play:String
+    var useragent: String? = "default",
+    var fetchtype: String? = "default",
+    var videoscontainer: SelectorWithAtrr? = null,
+    var clickcontainer: SelectorWithAtrr? = null,
+    var link: SelectorWithAtrr? = null,
+    var title:SelectorWithAtrr?=null,
+    var onclick:String="no",
+    var play:String = "no"
 ): Serializable {
     override fun toString(): String {
         return "DetailRule{" +
@@ -111,10 +111,10 @@ data class DetailRule(
 }
 
 data class PlayRule(
-    var useragent: String,
-    var type: String,
-    var filter: String,
-    var player: String
+    var useragent: String? = "default",
+    var type: String? = "default",
+    var filter: String? = "",
+    var player: String? = "ijk"
 ): Serializable {
     override fun toString(): String {
         return "PlayRule{" +
@@ -131,15 +131,15 @@ data class PlayRule(
 
 
 data class SearchRule(
-    var useragent: String,
-    var fetchtype: String,
-    var pagerule: String,
-    var pageone: String,
-    var videoscontainer: SelectorWithAtrr,
-    var thumb: SelectorWithAtrr,
-    var link: SelectorWithAtrr,
-    var title:SelectorWithAtrr,
-    var pagesize:Int
+    var useragent: String? = "default",
+    var fetchtype: String? = "default",
+    var pagerule: String? = "",
+    var pageone: String? = "",
+    var videoscontainer: SelectorWithAtrr? = null,
+    var thumb: SelectorWithAtrr? = null,
+    var link: SelectorWithAtrr? = null,
+    var title:SelectorWithAtrr?=null,
+    var pagesize:Int = 0
 ): Serializable {
     override fun toString(): String {
         return "SearchRule{" +
@@ -161,9 +161,9 @@ data class SearchRule(
 
 
 data class SelectorWithAtrr(
-    var selector: String,
-    var attrName: String,
-    var filter:String
+    var selector: String? = "",
+    var attrName: String? = "",
+    var filter:String? = ""
 ): Serializable {
     override fun toString(): String {
         return "SelectorWithAtrr{" +
@@ -176,6 +176,5 @@ data class SelectorWithAtrr(
         internal const val serialVersionUID = 7275661343466811
     }
 }
-
 
 
