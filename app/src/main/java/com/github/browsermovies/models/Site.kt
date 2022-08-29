@@ -17,11 +17,11 @@ data class Site(
     var uninword: String? = "",
     var next: String? = "detail",
     var thumb: String? = "",
-    val category: List<Category>? = "",
-    var list:ListRule? = "",
-    var detail:DetailRule? = "",
-    var play:PlayRule? = "",
-    var search:SearchRule? = ""
+    val category: List<Category>? = null,
+    var list:ListRule? = null,
+    var detail:DetailRule? = null,
+    var play:PlayRule? = null,
+    var search:SearchRule? = null
 
 ) : Serializable {
 
@@ -62,10 +62,10 @@ data class ListRule(
     var pagefilter:String? = "",
     var pagerule: String? = "",
     var pageone: String? = "",
-    var videoscontainer: SelectorWithAtrr? = "",
-    var thumb: SelectorWithAtrr? = "",
-    var link: SelectorWithAtrr? = "",
-    var title:SelectorWithAtrr?="",
+    var videoscontainer: SelectorWithAtrr? = null,
+    var thumb: SelectorWithAtrr? = null,
+    var link: SelectorWithAtrr? = null,
+    var title:SelectorWithAtrr?=null,
     var pagesize:Int = 0
 ): Serializable {
     override fun toString(): String {
@@ -87,10 +87,10 @@ data class ListRule(
 data class DetailRule(
     var useragent: String? = "default",
     var fetchtype: String? = "default",
-    var videoscontainer: SelectorWithAtrr? = "",
-    var clickcontainer: SelectorWithAtrr? = "",
-    var link: SelectorWithAtrr? = "",
-    var title:SelectorWithAtrr?="",
+    var videoscontainer: SelectorWithAtrr? = null,
+    var clickcontainer: SelectorWithAtrr? = null,
+    var link: SelectorWithAtrr? = null,
+    var title:SelectorWithAtrr?=null,
     var onclick:String="no",
     var play:String = "no"
 ): Serializable {
@@ -135,10 +135,10 @@ data class SearchRule(
     var fetchtype: String? = "default",
     var pagerule: String? = "",
     var pageone: String? = "",
-    var videoscontainer: SelectorWithAtrr? = "",
-    var thumb: SelectorWithAtrr? = "",
-    var link: SelectorWithAtrr? = "",
-    var title:SelectorWithAtrr?="",
+    var videoscontainer: SelectorWithAtrr? = null,
+    var thumb: SelectorWithAtrr? = null,
+    var link: SelectorWithAtrr? = null,
+    var title:SelectorWithAtrr?=null,
     var pagesize:Int = 0
 ): Serializable {
     override fun toString(): String {
