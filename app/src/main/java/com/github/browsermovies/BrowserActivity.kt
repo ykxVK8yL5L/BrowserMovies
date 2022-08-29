@@ -80,7 +80,7 @@ class BrowserActivity : XWalkActivity() {
                             Log.d("javascriptis",value)
                         })
                     }catch (e:java.lang.Exception){
-                        Toast.makeText(activity,"网络请求出错，请稍后再试", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"网络请求出错，请稍后再试", Toast.LENGTH_SHORT).show()
                     }
                 }, 2000)
                 
