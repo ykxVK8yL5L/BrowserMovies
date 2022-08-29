@@ -70,6 +70,10 @@ class BrowserActivity : XWalkActivity() {
 //                    // Execute onReceiveValue's code
 //                    Log.d("javascriptis",value)
 //                })
+                val jscmd = "function openFullscreen() {var elem = document.getElementsByTagName('video')[0]; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) {  elem.msRequestFullscreen();} elem.play();} openFullscreen();"
+                view!!.evaluateJavascript(jscmd,{ value ->
+                    Log.d("javascriptis",value)
+                })
             }
 
             override fun onLoadStarted(view: XWalkView?, url: String?) {
