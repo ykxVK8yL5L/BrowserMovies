@@ -20,7 +20,7 @@ import java.io.Serializable
  * Movie class represents video entity with title, description, image thumbs and video url.
  */
 data class Category(
-    var id: Long = 0,
+    var id: Long? = 0,
     var name: String? = null,
     var description: String? = null,
     var link: String? = null,
