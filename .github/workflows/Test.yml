@@ -27,7 +27,7 @@ jobs:
         run: |
           echo ${{ steps.setup-ndk.outputs.ndk-path }}
           chmod +x gradlew
-          ./gradlew assemblerelease --build-cache --parallel --daemon --warning-mode all --stacktrace
+          ./gradlew assembleDebug --build-cache --parallel --daemon --warning-mode all --stacktrace
       - name: Prepare App
         run: |
           mkdir -p ${{ github.workspace }}/apk/
