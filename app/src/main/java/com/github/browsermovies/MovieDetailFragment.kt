@@ -94,7 +94,6 @@ class MovieDetailFragment : VerticalGridFragment() {
             history.playSite = mSelectedSite
 
             if(mSelectedSite!!.openBrowser == "yes"){
-                this.processBar.setVisibility(View.GONE);
                 var intent = Intent(activity,BrowserActivity::class.java)
                 intent.putExtra("title",mSelectedMovie!!.title)
                 intent.putExtra("history",history)
