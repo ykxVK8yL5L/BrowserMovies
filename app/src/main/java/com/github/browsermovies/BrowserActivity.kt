@@ -73,12 +73,9 @@ class BrowserActivity : XWalkActivity() {
 //                })
                 //val jscmd = "function openFullscreen() {var elem = document.getElementsByTagName('video')[0]; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) {  elem.msRequestFullscreen();} elem.play();} openFullscreen();
                 val jscmd = "let button = document.createElement(\"button\");button.innerText=\"全屏\";button.onclick = function(){var elem = document.getElementsByTagName(\"video\")[0]; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) {  elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) {  elem.msRequestFullscreen(); } elem.play();};button.setAttribute(\"id\", \"myvideo\");button.style.cssText = \"position:absolute;top:0px;left:0px;width:100%;height:50px;z-index:9999\";document.body.appendChild(button);button.focus();"
-                
-                Handler().postDelayed({
-                    view!!.evaluateJavascript(jscmd,{ value ->
+                view!!.evaluateJavascript(jscmd,{ value ->
                             Log.d("javascriptis",value)
-                    })
-                }, 2000)
+                })
                 
             }
 
