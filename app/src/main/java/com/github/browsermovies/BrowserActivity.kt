@@ -75,13 +75,9 @@ class BrowserActivity : XWalkActivity() {
                 val jscmd = "let button = document.createElement(\"button\");button.innerText=\"全屏\";button.onclick = function(){var elem = document.getElementsByTagName(\"video\")[0]; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) {  elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) {  elem.msRequestFullscreen(); } elem.play();};button.setAttribute(\"id\", \"myvideo\");button.style.cssText = \"position:absolute;top:0px;left:0px;width:100%;height:50px;z-index:9999\";document.body.appendChild(button);button.focus();"
                 
                 Handler().postDelayed({
-                 try{
-                        view!!.evaluateJavascript(jscmd,{ value ->
+                    view!!.evaluateJavascript(jscmd,{ value ->
                             Log.d("javascriptis",value)
-                        })
-                    }catch (e:java.lang.Exception){
-                       Log.d("javascript failed")
-                    }
+                    })
                 }, 2000)
                 
             }
