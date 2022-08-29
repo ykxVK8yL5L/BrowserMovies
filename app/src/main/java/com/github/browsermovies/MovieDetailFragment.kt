@@ -101,6 +101,7 @@ class MovieDetailFragment : VerticalGridFragment() {
                 intent.putExtra("site",mSelectedSite)
                 intent.putExtra("loadUrl",card.videoUrl)
                 startActivity(intent)
+                processBar.setVisibility(View.GONE)
             }else{
                 if(this.mSelectedSite!!.detail!!.onclick=="yes"){
                     val jscmd = "document.querySelectorAll('"+mSelectedSite!!.detail!!.clickcontainer!!.selector+"')["+mAdapter!!.indexOf(card)+"].click()"
