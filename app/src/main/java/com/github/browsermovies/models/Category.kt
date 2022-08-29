@@ -21,12 +21,12 @@ import java.io.Serializable
  */
 data class Category(
     var id: Long = 0,
-    var name: String? = null,
-    var description: String? = null,
-    var link: String? = null,
-    var title: String? = null,
+    var name: String? = "",
+    var description: String? = "",
+    var link: String? = "",
+    var title: String? = "",
     var next: String? = "detail",
-    var localImageResource: String? = null
+    var localImageResource: String? = ""
 
 
 ) : Serializable {
@@ -47,6 +47,6 @@ data class Category(
     }
 
     companion object {
-        internal const val serialVersionUID = 7275661343455454
+        internal const val serialVersionUID = 7275661343456454
     }
 }
