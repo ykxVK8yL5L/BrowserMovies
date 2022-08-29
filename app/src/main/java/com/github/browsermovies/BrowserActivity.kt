@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -71,10 +72,18 @@ class BrowserActivity : XWalkActivity() {
 //                    Log.d("javascriptis",value)
 //                })
                 //val jscmd = "function openFullscreen() {var elem = document.getElementsByTagName('video')[0]; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) {  elem.msRequestFullscreen();} elem.play();} openFullscreen();
-                 val jscmd = "let button = document.createElement(\"button\");button.innerText=\"全屏\";button.onclick = function(){var elem = document.getElementsByTagName(\"video\")[0]; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) {  elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) {  elem.msRequestFullscreen(); } elem.play();};button.setAttribute(\"id\", \"myvideo\");button.style.cssText = \"position:absolute;top:0px;left:0px;width:100%;height:50px;z-index:9999\";document.body.appendChild(button);button.focus();"
-                view!!.evaluateJavascript(jscmd,{ value ->
-                    Log.d("javascriptis",value)
-                })
+                val jscmd = "let button = document.createElement(\"button\");button.innerText=\"全屏\";button.onclick = function(){var elem = document.getElementsByTagName(\"video\")[0]; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) {  elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) {  elem.msRequestFullscreen(); } elem.play();};button.setAttribute(\"id\", \"myvideo\");button.style.cssText = \"position:absolute;top:0px;left:0px;width:100%;height:50px;z-index:9999\";document.body.appendChild(button);button.focus();"
+                
+                Handler().postDelayed({
+                 try{
+                        view!!.evaluateJavascript(jscmd,{ value ->
+                            Log.d("javascriptis",value)
+                        })
+                    }catch (e:java.lang.Exception){
+                        Toast.makeText(activity,"网络请求出错，请稍后再试", Toast.LENGTH_SHORT).show()
+                    }
+                }, 2000)
+                
             }
 
             override fun onLoadStarted(view: XWalkView?, url: String?) {
