@@ -250,7 +250,7 @@ class MovieDetailFragment : VerticalGridFragment() {
     }
 
     private fun handlePageResult(result:String){
-        //LogUtil().loge("sourceresultis",result)
+        LogUtil().loge("sourceresultis",result)
         processBar.setVisibility(View.GONE);
         try {
             var doc = Jsoup.parse(result)
