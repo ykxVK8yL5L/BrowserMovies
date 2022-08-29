@@ -10,7 +10,7 @@ data class Site(
     var description: String? = "",
     var link: String? = "",
     var title: String? = "",
-    var openBrowser:String = "no",
+    var openBrowser:String? = "no",
     var localImageResource: String? = "",
     var presenter: String? = "Movie",
     var inword: String? = "m3u8,mp4",
@@ -91,8 +91,8 @@ data class DetailRule(
     var clickcontainer: SelectorWithAtrr? = null,
     var link: SelectorWithAtrr? = null,
     var title:SelectorWithAtrr?=null,
-    var onclick:String="no",
-    var play:String = "no"
+    var onclick:String?="no",
+    var play:String? = "no"
 ): Serializable {
     override fun toString(): String {
         return "DetailRule{" +
